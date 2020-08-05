@@ -55,8 +55,12 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=14;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = "Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular"
+font-4 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid"
+font-5 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular"
 
-modules-left = bspwm i3
+modules-left = i3
+;modules-left = bspwm i3
 modules-center = mpd
 modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
@@ -72,8 +76,8 @@ wm-restack = i3
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -84,7 +88,7 @@ bottom = true
 type = internal/xwindow
 label = %title:0:30:...%
 
-;[module/xkeyboard]
+[module/xkeyboard]
 ;type = internal/xkeyboard
 ;blacklist-0 = num lock
 
@@ -100,7 +104,7 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
-;[module/filesystem]
+[module/filesystem]
 ;type = internal/fs
 ;interval = 25
 
@@ -171,21 +175,20 @@ M; label-separator = |
 
 
 [module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+;type = internal/mpd
+;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+;icon-prev = 
+;icon-stop = 
+;icon-play = 
+;icon-pause = 
+;icon-next = 
 
-label-song-maxlen = 25
-label-song-ellipsis = true
+;label-song-maxlen = 25
+;label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
-;
 format = <label> <bar>
 label = BL
 
@@ -221,20 +224,20 @@ card = intel_backlight
 ;format-underline = #4bffdc
 ;label = %percentage_used%%
 
-;[module/wlan]
+[module/wlan]
 ;type = internal/network
 ;interface = wlp5s0
 ;interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected> 
 format-connected-underline = #9f78e1
 label-connected = %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;format-disconnected =
+format-disconnected = <label-disconnected> 
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -244,20 +247,20 @@ ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
-type = internal/network
-interface = enp3s0
-interval = 3.0
+;type = internal/network
+;interface = enp3s0
+;interval = 3.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;format-disconnected =
+format-disconnected = <label-disconnected> 
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
@@ -279,7 +282,7 @@ label = %time%   %date%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume> <ramp-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
@@ -311,6 +314,11 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 [module/alsa]
 type = internal/alsa
