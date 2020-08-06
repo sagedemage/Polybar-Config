@@ -56,6 +56,11 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=16;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = "Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular"
+font-4 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular"
+font-5 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid"
+font-6 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular"
+font-7 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid"
 
 #test-fonts.pl
 use strict;
@@ -199,7 +204,7 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
+format = <label> <ramp>
 label = BL
 
 bar-width = 10
@@ -213,6 +218,13 @@ bar-fill-foreground = #f0ff00
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
+
+; Only applies if <ramp> is used
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -293,7 +305,7 @@ label = %time%   %date%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume> <ramp-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
@@ -305,8 +317,13 @@ use-ui-max = false
 ; Default: 5
 interval = 5
 
-label-muted = 🔇 muted
+label-muted = muted 
 label-muted-foreground = #666
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 bar-volume-width = 10
 ;bar-volume-foreground-0 = #0a6cf5
@@ -360,21 +377,28 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = <label-charging> 
+format-charging = <animation-charging> <label-charging> 
 ;format-charging-underline = #ffb52a
 format-charging-underline = #a3ff00
 
-format-discharging = <label-discharging> 
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging = <ramp-capacity> <label-discharging> 
+;format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = #a3ff00
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+;ramp-capacity-foreground = ${colors.foreground-alt}
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
@@ -456,5 +480,3 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
-
-
