@@ -1,5 +1,5 @@
 # Polybar Config:
-I have setup the polybar config for laptops and desktops separatly because the laptop config require different modules like xbacklight and battery.  
+I have setup the polybar config for laptops and desktops separatly because the laptop config require different modules like xbacklight and battery. The configs are also seperated by distro because of the theming I applied to each one.  
 
 ## Polybar Config Location:
 ~/.config/polybar/config
@@ -7,5 +7,5 @@ I have setup the polybar config for laptops and desktops separatly because the l
 ## Required Fonts:
 1. ttf-font-awesome
 
-## Required Programs for the laptop config:
+## Required Programs for the laptop configs:
 1. xorg-xbacklight
