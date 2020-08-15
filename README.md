@@ -6,6 +6,7 @@ I have setup the polybar config for laptops and desktops separatly because the l
 
 ## Required Fonts:
 1. ttf-font-awesome
+2. noto-fonts
 
 ## Required Programs for the laptop configs:
 1. xorg-xbacklight
