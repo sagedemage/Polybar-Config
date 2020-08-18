@@ -349,7 +349,7 @@ label-muted = sound muted
 ;bar-volume-empty-font = 2
 ;bar-volume-empty-foreground = ${colors.foreground-alt}
 
-;[module/battery]
+[module/battery]
 ;type = internal/battery
 ;battery = BAT0
 ;adapter = ADP1
@@ -382,7 +382,7 @@ animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
-;[module/temperature]
+[module/temperature]
 ;type = internal/temperature
 ;thermal-zone = 0
 ;warn-temperature = 60
@@ -401,7 +401,7 @@ ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
-;[module/powermenu]
+[module/powermenu]
 ;type = custom/menu
 
 expand-right = true
