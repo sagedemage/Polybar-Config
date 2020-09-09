@@ -18,8 +18,6 @@ I have setup the polybar config for laptops and desktops separatly because the l
 1. xorg-xbacklight
 
 ## Credit to the creators of Polybar
-Official Website
-https://polybar.github.io
+Official Website: https://polybar.github.io
 
-Their Github Page
-https://github.com/polybar/polybar
+Their Github Page: https://github.com/polybar/polybar
