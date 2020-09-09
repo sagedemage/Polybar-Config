@@ -20,4 +20,4 @@ I have setup the polybar config for laptops and desktops separatly because the l
 ## Credit to the creators of Polybar
 Official Website: https://polybar.github.io
 
-Github Page: https://github.com/polybar/polybar
+Github Website: https://github.com/polybar/polybar
