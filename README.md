@@ -9,7 +9,7 @@ I have setup the polybar config for laptops and desktops separatly because the l
 2. noto-fonts
 
 ## REquired Fonts for Debian:
-1. ttf-font-awesome
+1. fonts-font-awesome
 2. noto-fonts
 3. fonts-material-design-icons-iconfont
 4. fonts-materialdesignicons-webfont
