@@ -1,4 +1,4 @@
-# About:
+# About
 I have setup the polybar config for laptops and desktops separatly because the laptop config require different modules like xbacklight and battery. The configs are also seperated by distro because of the theming I applied to each one.  
 
 ## Polybar Config Location:
@@ -16,3 +16,10 @@ I have setup the polybar config for laptops and desktops separatly because the l
 
 ## Required Programs for the laptop configs:
 1. xorg-xbacklight
+
+## Credit to the creators of Polybar
+Official Website
+https://polybar.github.io
+
+Their Github Page
+https://github.com/polybar/polybar
