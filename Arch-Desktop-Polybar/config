@@ -172,7 +172,7 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
-M; label-separator = |
+;M; label-separator = |
 
 
 [module/mpd]
