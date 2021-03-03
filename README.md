@@ -4,7 +4,7 @@ I have setup the polybar config for laptops and desktops separatly because the l
 ## Polybar Config Location:
 ~/.config/polybar/config
 
-## Required Fonts for Arch and Endeavor os:
+## Required Fonts for Arch:
 1. ttf-font-awesome
 2. noto-fonts
 
