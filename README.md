@@ -14,7 +14,7 @@ I have setup the polybar config for laptops and desktops separatly because the l
 3. fonts-material-design-icons-iconfont
 4. fonts-materialdesignicons-webfont
 
-## Required Programs for the laptop configs:
+## Required Programs for laptops:
 1. xorg-xbacklight
 
 ## Credit to the creators of Polybar
